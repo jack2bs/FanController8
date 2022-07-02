@@ -1,0 +1,24 @@
+/*
+ * TWI.h
+ *
+ * Created: 1/26/2021 7:31:21 PM
+ *  Author: Jack2bs
+ */ 
+
+
+#ifndef TWI_H_
+#define TWI_H_
+
+#include "Main.h"
+
+#define TEMP_SENSOR_ONE_ADDRESS 0b0011111
+#define TEMP_SENSOR_TWO_ADDRESS 0b0011000
+#define TEMP_SENSOR_ONE_ADDRESS_PLUS_WRITE 0b00111110
+#define TEMP_SENSOR_TWO_ADDRESS_PLUS_WRITE 0b00110000
+#define TEMP_SENSOR_ONE_ADDRESS_PLUS_READ 0b00111111
+#define TEMP_SENSOR_TWO_ADDRESS_PLUS_READ 0b00110001
+
+void TWIInit();
+void putTempInString();
+
+#endif /* TWI_H_ */

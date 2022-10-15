@@ -15,3 +15,4 @@ Finally, this fan controller took me longer to get right than any project I've w
 
 I wish I could provide a more in depth overview of my decision making process, and the process of producing the device, but it's been a few years, and I've honestly forgotten so much.
 
+![Fan Controller image](FanController.jpg)

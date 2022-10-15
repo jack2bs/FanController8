@@ -1,0 +1,18 @@
+﻿  CustomWidgetTest.cpp
+  DataPointMovedEvent.cpp
+  FanCurveContainer.cpp
+  FanCurveDataPoint.cpp
+  FanCurveGraph.cpp
+c:\users\jack2bs\source\repos\fancontroller 2\fancontroller 2\fancurvegraph.cpp(67): warning C4018: '<': signed/unsigned mismatch
+c:\users\jack2bs\source\repos\fancontroller 2\fancontroller 2\fancurvegraph.cpp(121): warning C4018: '<': signed/unsigned mismatch
+c:\users\jack2bs\source\repos\fancontroller 2\fancontroller 2\fancurvegraph.cpp(205): warning C4018: '<': signed/unsigned mismatch
+c:\users\jack2bs\source\repos\fancontroller 2\fancontroller 2\fancurvegraph.cpp(265): warning C4018: '<': signed/unsigned mismatch
+  MainApp.cpp
+c:\users\jack2bs\source\repos\fancontroller 2\fancontroller 2\mainapp.cpp(127): warning C4018: '<': signed/unsigned mismatch
+c:\users\jack2bs\source\repos\fancontroller 2\fancontroller 2\mainapp.cpp(203): warning C4018: '<': signed/unsigned mismatch
+c:\users\jack2bs\source\repos\fancontroller 2\fancontroller 2\mainapp.cpp(218): warning C4018: '<': signed/unsigned mismatch
+  ParentFrame.cpp
+  SliderWithoutArt.cpp
+  Test.cpp
+  Generating Code...
+  FanController 2.vcxproj -> C:\Users\Jack2bs\source\repos\FanController 2\Debug\FanController 2.exe

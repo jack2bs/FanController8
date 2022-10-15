@@ -1,0 +1,5 @@
+#pragma once
+
+#define FRAME_BACKGROUND_COLOUR wxColour(0x24, 0x24, 0x24, 0xff)
+
+#define FCC_BACKGROUND_COLOUR  wxColour(0x2b, 0x2b, 0x2b, 0xff)

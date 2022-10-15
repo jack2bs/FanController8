@@ -1,0 +1,7 @@
+#pragma once
+
+#define INITIALIZE_COMMAND "!0"
+#define NUMBER_OF_FANS_REQUEST "!1"
+#define SEND_PROFILE_REQUEST "!2"
+#define SAVE_PROFILE_REQUEST "!3"
+#define SEND_CPU_TEMP_REQUEST "!5"

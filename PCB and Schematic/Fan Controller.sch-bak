@@ -1,0 +1,1114 @@
+EESchema Schematic File Version 4
+LIBS:Fan Controller-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega32U4-AU U1
+U 1 1 5FFB75BE
+P 3000 2750
+F 0 "U1" H 3000 861 50  0000 C CNN
+F 1 "ATmega32U4-AU" H 3000 770 50  0000 C CNN
+F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 3000 2750 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 3000 2750 50  0001 C CNN
+	1    3000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal_GND24_Small Y1
+U 1 1 5FFC1836
+P 1400 1550
+F 0 "Y1" V 1150 1500 50  0000 L CNN
+F 1 "16Mhz" V 1250 1500 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 1400 1550 50  0001 C CNN
+F 3 "~" H 1400 1550 50  0001 C CNN
+	1    1400 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 1450 1400 1450
+Wire Wire Line
+	1400 1650 2400 1650
+$Comp
+L Device:C_Small C1
+U 1 1 5FFC37AE
+P 700 1550
+F 0 "C1" H 650 1800 50  0000 L CNN
+F 1 "22pF" H 650 1700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 700 1550 50  0001 C CNN
+F 3 "~" H 700 1550 50  0001 C CNN
+	1    700  1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5FFC3D44
+P 1050 1750
+F 0 "C2" H 1100 1500 50  0000 R CNN
+F 1 "22pF" H 1100 1600 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1050 1750 50  0001 C CNN
+F 3 "~" H 1050 1750 50  0001 C CNN
+	1    1050 1750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1400 1450 700  1450
+Connection ~ 1400 1450
+Wire Wire Line
+	1400 1650 1050 1650
+Connection ~ 1400 1650
+Wire Wire Line
+	700  1650 700  1850
+Wire Wire Line
+	700  1850 1050 1850
+Wire Wire Line
+	1300 1550 1300 1850
+Wire Wire Line
+	1300 1850 1050 1850
+Connection ~ 1050 1850
+Wire Wire Line
+	1500 1550 1500 1850
+Wire Wire Line
+	1500 1850 1300 1850
+Connection ~ 1300 1850
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0101
+U 1 1 5FFC702A
+P 1050 1850
+F 0 "#PWR0101" H 1050 1900 20  0001 C CNN
+F 1 "GND" H 1050 1750 30  0000 C CNN
+F 2 "" H 1050 1850 60  0000 C CNN
+F 3 "" H 1050 1850 60  0000 C CNN
+	1    1050 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 5FFC93F2
+P 2750 950
+F 0 "#PWR0102" H 2750 800 50  0001 C CNN
+F 1 "+5V" H 2765 1123 50  0000 C CNN
+F 2 "" H 2750 950 50  0001 C CNN
+F 3 "" H 2750 950 50  0001 C CNN
+	1    2750 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 950  2900 950 
+Wire Wire Line
+	2900 950  3000 950 
+Connection ~ 2900 950 
+Wire Wire Line
+	3000 950  3100 950 
+Connection ~ 3000 950 
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0103
+U 1 1 5FFCA30C
+P 3200 4550
+F 0 "#PWR0103" H 3200 4600 20  0001 C CNN
+F 1 "GND" H 3200 4609 30  0000 C CNN
+F 2 "" H 3200 4550 60  0000 C CNN
+F 3 "" H 3200 4550 60  0000 C CNN
+	1    3200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 4550 3000 4550
+Wire Wire Line
+	3000 4550 2900 4550
+Connection ~ 3000 4550
+$Comp
+L Device:R_Small R1
+U 1 1 5FFCAB7E
+P 1800 2250
+F 0 "R1" V 1600 2250 50  0000 C CNN
+F 1 "22R" V 1700 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1800 2250 50  0001 C CNN
+F 3 "~" H 1800 2250 50  0001 C CNN
+	1    1800 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5FFCB23E
+P 1450 2350
+F 0 "R2" V 1550 2350 50  0000 C CNN
+F 1 "22R" V 1650 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1450 2350 50  0001 C CNN
+F 3 "~" H 1450 2350 50  0001 C CNN
+	1    1450 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 2250 1350 2250
+Text GLabel 1350 2250 0    50   Input ~ 0
+D+
+Text GLabel 1350 2350 0    50   Input ~ 0
+D-
+$Comp
+L Device:C_Small C3
+U 1 1 5FFCDFB5
+P 2300 2650
+F 0 "C3" H 2100 2650 50  0000 L CNN
+F 1 "1uF" H 2100 2550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2300 2650 50  0001 C CNN
+F 3 "~" H 2300 2650 50  0001 C CNN
+	1    2300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0104
+U 1 1 5FFCE908
+P 2300 2750
+F 0 "#PWR0104" H 2300 2800 20  0001 C CNN
+F 1 "GND" H 2300 2650 30  0000 C CNN
+F 2 "" H 2300 2750 60  0000 C CNN
+F 3 "" H 2300 2750 60  0000 C CNN
+	1    2300 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2550 2400 2550
+$Comp
+L power:+5V #PWR0105
+U 1 1 5FFCFAEE
+P 2250 2150
+F 0 "#PWR0105" H 2250 2000 50  0001 C CNN
+F 1 "+5V" H 2265 2323 50  0000 C CNN
+F 2 "" H 2250 2150 50  0001 C CNN
+F 3 "" H 2250 2150 50  0001 C CNN
+	1    2250 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2050 2400 2150
+Wire Wire Line
+	2400 2150 2250 2150
+Wire Wire Line
+	2400 2250 1900 2250
+Wire Wire Line
+	1550 2350 2400 2350
+$Comp
+L power:+5V #PWR0106
+U 1 1 5FFD60AB
+P 600 2650
+F 0 "#PWR0106" H 600 2500 50  0001 C CNN
+F 1 "+5V" H 615 2823 50  0000 C CNN
+F 2 "" H 600 2650 50  0001 C CNN
+F 3 "" H 600 2650 50  0001 C CNN
+	1    600  2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0107
+U 1 1 5FFD67DA
+P 600 3150
+F 0 "#PWR0107" H 600 3200 20  0001 C CNN
+F 1 "GND" H 600 3050 30  0000 C CNN
+F 2 "" H 600 3150 60  0000 C CNN
+F 3 "" H 600 3150 60  0000 C CNN
+	1    600  3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5FFD6F51
+P 1000 2900
+F 0 "C5" H 950 3050 50  0000 L CNN
+F 1 "0.1uF" H 900 2750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1000 2900 50  0001 C CNN
+F 3 "~" H 1000 2900 50  0001 C CNN
+	1    1000 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 5FFD73C7
+P 1200 2900
+F 0 "C6" H 1150 3050 50  0000 L CNN
+F 1 "0.1uF" H 1100 2750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1200 2900 50  0001 C CNN
+F 3 "~" H 1200 2900 50  0001 C CNN
+	1    1200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 5FFD7A3D
+P 1400 2900
+F 0 "C7" H 1350 3050 50  0000 L CNN
+F 1 "0.1uF" H 1300 2750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1400 2900 50  0001 C CNN
+F 3 "~" H 1400 2900 50  0001 C CNN
+	1    1400 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 5FFD7EDC
+P 1600 2900
+F 0 "C8" H 1550 3050 50  0000 L CNN
+F 1 "0.1uF" H 1500 2750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1600 2900 50  0001 C CNN
+F 3 "~" H 1600 2900 50  0001 C CNN
+	1    1600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 5FFDB72C
+P 1800 2900
+F 0 "C9" H 1750 3050 50  0000 L CNN
+F 1 "10uF" H 1700 2750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1800 2900 50  0001 C CNN
+F 3 "~" H 1800 2900 50  0001 C CNN
+	1    1800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5FFDC5CA
+P 800 2900
+F 0 "C4" H 750 3050 50  0000 L CNN
+F 1 "0.1uF" H 700 2750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 800 2900 50  0001 C CNN
+F 3 "~" H 800 2900 50  0001 C CNN
+	1    800  2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5FFDD9E2
+P 2300 1050
+F 0 "R3" H 2350 1200 50  0000 L CNN
+F 1 "10k" H 2350 1100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 2300 1050 50  0001 C CNN
+F 3 "~" H 2300 1050 50  0001 C CNN
+	1    2300 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0108
+U 1 1 5FFDE5D2
+P 2300 950
+F 0 "#PWR0108" H 2300 800 50  0001 C CNN
+F 1 "+5V" H 2315 1123 50  0000 C CNN
+F 2 "" H 2300 950 50  0001 C CNN
+F 3 "" H 2300 950 50  0001 C CNN
+	1    2300 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1150 2300 1250
+$Comp
+L keyboard_parts:SW_PUSH SW1
+U 1 1 5FFDF344
+P 1950 1250
+F 0 "SW1" H 1950 1505 50  0000 C CNN
+F 1 "SW_PUSH" H 1950 1414 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 1950 1250 60  0001 C CNN
+F 3 "" H 1950 1250 60  0000 C CNN
+	1    1950 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1250 2300 1250
+Connection ~ 2300 1250
+Wire Wire Line
+	2300 1250 2400 1250
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0109
+U 1 1 5FFE01C1
+P 1650 1250
+F 0 "#PWR0109" H 1650 1300 20  0001 C CNN
+F 1 "GND" H 1650 1309 30  0000 C CNN
+F 2 "" H 1650 1250 60  0000 C CNN
+F 3 "" H 1650 1250 60  0000 C CNN
+	1    1650 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5FFE0CCF
+P 3800 3350
+F 0 "R4" V 3700 3350 50  0000 C CNN
+F 1 "10k" V 3900 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3800 3350 50  0001 C CNN
+F 3 "~" H 3800 3350 50  0001 C CNN
+	1    3800 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0110
+U 1 1 5FFE18F7
+P 3900 3350
+F 0 "#PWR0110" H 3900 3400 20  0001 C CNN
+F 1 "GND" H 4000 3350 30  0000 C CNN
+F 2 "" H 3900 3350 60  0000 C CNN
+F 3 "" H 3900 3350 60  0000 C CNN
+	1    3900 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3350 3700 3350
+$Comp
+L Motor:Fan_4pin M1
+U 1 1 5FFE4F33
+P 5650 3550
+F 0 "M1" V 5945 3600 50  0000 C CNN
+F 1 "Fan_4pin" V 5854 3600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5650 3560 50  0001 C CNN
+F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 5650 3560 50  0001 C CNN
+	1    5650 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:DMN1019USN-7-NMOS T1
+U 1 1 60038C88
+P 6150 3150
+F 0 "T1" V 6733 3150 60  0000 C CNN
+F 1 "DMN1019USN-7" V 6850 2850 60  0000 C CNN
+F 2 "NMOS:DMN1019USN-7" H 6700 2890 60  0001 C CNN
+F 3 "" H 6150 3150 60  0000 C CNN
+	1    6150 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0111
+U 1 1 60063564
+P 6450 3550
+F 0 "#PWR0111" H 6450 3600 20  0001 C CNN
+F 1 "GND" H 6450 3609 30  0000 C CNN
+F 2 "" H 6450 3550 60  0000 C CNN
+F 3 "" H 6450 3550 60  0000 C CNN
+	1    6450 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0112
+U 1 1 600638BE
+P 5350 3550
+F 0 "#PWR0112" H 5350 3400 50  0001 C CNN
+F 1 "+12V" H 5365 3723 50  0000 C CNN
+F 2 "" H 5350 3550 50  0001 C CNN
+F 3 "" H 5350 3550 50  0001 C CNN
+	1    5350 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_4pin M2
+U 1 1 6006B313
+P 7500 3550
+F 0 "M2" V 7795 3600 50  0000 C CNN
+F 1 "Fan_4pin" V 7704 3600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7500 3560 50  0001 C CNN
+F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 7500 3560 50  0001 C CNN
+	1    7500 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:DMN1019USN-7-NMOS T2
+U 1 1 6006B319
+P 8000 3150
+F 0 "T2" V 8583 3150 60  0000 C CNN
+F 1 "DMN1019USN-7" V 8700 2850 60  0000 C CNN
+F 2 "NMOS:DMN1019USN-7" H 8550 2890 60  0001 C CNN
+F 3 "" H 8000 3150 60  0000 C CNN
+	1    8000 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0113
+U 1 1 6006B31F
+P 8300 3550
+F 0 "#PWR0113" H 8300 3600 20  0001 C CNN
+F 1 "GND" H 8300 3609 30  0000 C CNN
+F 2 "" H 8300 3550 60  0000 C CNN
+F 3 "" H 8300 3550 60  0000 C CNN
+	1    8300 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0114
+U 1 1 6006B325
+P 7200 3550
+F 0 "#PWR0114" H 7200 3400 50  0001 C CNN
+F 1 "+12V" H 7215 3723 50  0000 C CNN
+F 2 "" H 7200 3550 50  0001 C CNN
+F 3 "" H 7200 3550 50  0001 C CNN
+	1    7200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_4pin M4
+U 1 1 600702F8
+P 5650 4700
+F 0 "M4" V 5945 4750 50  0000 C CNN
+F 1 "Fan_4pin" V 5854 4750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5650 4710 50  0001 C CNN
+F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 5650 4710 50  0001 C CNN
+	1    5650 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:DMN1019USN-7-NMOS T4
+U 1 1 600702FE
+P 6150 4300
+F 0 "T4" V 6733 4300 60  0000 C CNN
+F 1 "DMN1019USN-7" V 6850 4000 60  0000 C CNN
+F 2 "NMOS:DMN1019USN-7" H 6700 4040 60  0001 C CNN
+F 3 "" H 6150 4300 60  0000 C CNN
+	1    6150 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0115
+U 1 1 60070304
+P 6450 4700
+F 0 "#PWR0115" H 6450 4750 20  0001 C CNN
+F 1 "GND" H 6450 4759 30  0000 C CNN
+F 2 "" H 6450 4700 60  0000 C CNN
+F 3 "" H 6450 4700 60  0000 C CNN
+	1    6450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_4pin M5
+U 1 1 600713A8
+P 7550 4750
+F 0 "M5" V 7845 4800 50  0000 C CNN
+F 1 "Fan_4pin" V 7754 4800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7550 4760 50  0001 C CNN
+F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 7550 4760 50  0001 C CNN
+	1    7550 4750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:DMN1019USN-7-NMOS T5
+U 1 1 600713AE
+P 8050 4350
+F 0 "T5" V 8633 4350 60  0000 C CNN
+F 1 "DMN1019USN-7" V 8750 4050 60  0000 C CNN
+F 2 "NMOS:DMN1019USN-7" H 8600 4090 60  0001 C CNN
+F 3 "" H 8050 4350 60  0000 C CNN
+	1    8050 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0117
+U 1 1 600713B4
+P 8350 4750
+F 0 "#PWR0117" H 8350 4800 20  0001 C CNN
+F 1 "GND" H 8350 4809 30  0000 C CNN
+F 2 "" H 8350 4750 60  0000 C CNN
+F 3 "" H 8350 4750 60  0000 C CNN
+	1    8350 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0118
+U 1 1 600713BA
+P 7250 4750
+F 0 "#PWR0118" H 7250 4600 50  0001 C CNN
+F 1 "+12V" H 7265 4923 50  0000 C CNN
+F 2 "" H 7250 4750 50  0001 C CNN
+F 3 "" H 7250 4750 50  0001 C CNN
+	1    7250 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_4pin M3
+U 1 1 60074244
+P 9350 3550
+F 0 "M3" V 9645 3600 50  0000 C CNN
+F 1 "Fan_4pin" V 9554 3600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9350 3560 50  0001 C CNN
+F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 9350 3560 50  0001 C CNN
+	1    9350 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:DMN1019USN-7-NMOS T3
+U 1 1 6007424A
+P 9850 3150
+F 0 "T3" V 10433 3150 60  0000 C CNN
+F 1 "DMN1019USN-7" V 10550 2850 60  0000 C CNN
+F 2 "NMOS:DMN1019USN-7" H 10400 2890 60  0001 C CNN
+F 3 "" H 9850 3150 60  0000 C CNN
+	1    9850 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0119
+U 1 1 60074250
+P 10150 3550
+F 0 "#PWR0119" H 10150 3600 20  0001 C CNN
+F 1 "GND" H 10150 3609 30  0000 C CNN
+F 2 "" H 10150 3550 60  0000 C CNN
+F 3 "" H 10150 3550 60  0000 C CNN
+	1    10150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0120
+U 1 1 60074256
+P 9050 3550
+F 0 "#PWR0120" H 9050 3400 50  0001 C CNN
+F 1 "+12V" H 9065 3723 50  0000 C CNN
+F 2 "" H 9050 3550 50  0001 C CNN
+F 3 "" H 9050 3550 50  0001 C CNN
+	1    9050 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_4pin M6
+U 1 1 600761EC
+P 9350 4750
+F 0 "M6" V 9645 4800 50  0000 C CNN
+F 1 "Fan_4pin" V 9554 4800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9350 4760 50  0001 C CNN
+F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 9350 4760 50  0001 C CNN
+	1    9350 4750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:DMN1019USN-7-NMOS T6
+U 1 1 600761F2
+P 9850 4350
+F 0 "T6" V 10433 4350 60  0000 C CNN
+F 1 "DMN1019USN-7" V 10550 4050 60  0000 C CNN
+F 2 "NMOS:DMN1019USN-7" H 10400 4090 60  0001 C CNN
+F 3 "" H 9850 4350 60  0000 C CNN
+	1    9850 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0121
+U 1 1 600761F8
+P 10150 4750
+F 0 "#PWR0121" H 10150 4800 20  0001 C CNN
+F 1 "GND" H 10150 4809 30  0000 C CNN
+F 2 "" H 10150 4750 60  0000 C CNN
+F 3 "" H 10150 4750 60  0000 C CNN
+	1    10150 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0122
+U 1 1 600761FE
+P 9050 4750
+F 0 "#PWR0122" H 9050 4600 50  0001 C CNN
+F 1 "+12V" H 9065 4923 50  0000 C CNN
+F 2 "" H 9050 4750 50  0001 C CNN
+F 3 "" H 9050 4750 50  0001 C CNN
+	1    9050 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 3600 1450 2    50   Input ~ 0
+FAN1POW
+Text GLabel 3600 1550 2    50   Input ~ 0
+FAN2POW
+Text GLabel 3600 1650 2    50   Input ~ 0
+FAN3POW
+Text GLabel 3600 1750 2    50   Input ~ 0
+FAN4POW
+Text GLabel 3600 1850 2    50   Input ~ 0
+FAN5POW
+Text GLabel 3600 1950 2    50   Input ~ 0
+FAN6POW
+Text GLabel 6150 3150 2    50   Input ~ 0
+FAN1POW
+Text GLabel 8000 3150 2    50   Input ~ 0
+FAN2POW
+Text GLabel 9850 3150 2    50   Input ~ 0
+FAN3POW
+Text GLabel 6150 4300 2    50   Input ~ 0
+FAN4POW
+Text GLabel 8050 4350 2    50   Input ~ 0
+FAN5POW
+Text GLabel 9850 4350 2    50   Input ~ 0
+FAN6POW
+Text GLabel 3600 2650 2    50   Input ~ 0
+FAN1PWM
+Text GLabel 3600 2750 2    50   Input ~ 0
+FAN2PWM
+Text GLabel 3600 2850 2    50   Input ~ 0
+FAN3PWM
+Text GLabel 3600 2950 2    50   Input ~ 0
+FAN4PWM
+Text GLabel 3600 3050 2    50   Input ~ 0
+FAN5PWM
+Text GLabel 3600 3150 2    50   Input ~ 0
+FAN6PWM
+Text GLabel 5750 4050 2    50   Input ~ 0
+FAN1PWM
+Text GLabel 7600 4050 2    50   Input ~ 0
+FAN2PWM
+Text GLabel 9450 4050 2    50   Input ~ 0
+FAN3PWM
+Text GLabel 5750 5200 2    50   Input ~ 0
+FAN4PWM
+Text GLabel 7650 5250 2    50   Input ~ 0
+FAN5PWM
+Text GLabel 9450 5250 2    50   Input ~ 0
+FAN6PWM
+Text GLabel 3600 3650 2    50   Input ~ 0
+FAN1TAC
+Text GLabel 3600 3750 2    50   Input ~ 0
+FAN2TAC
+Text GLabel 3600 3850 2    50   Input ~ 0
+FAN3TAC
+Text GLabel 3600 3950 2    50   Input ~ 0
+FAN4TAC
+Text GLabel 3600 4050 2    50   Input ~ 0
+FAN5TAC
+Text GLabel 3600 4150 2    50   Input ~ 0
+FAN6TAC
+Wire Wire Line
+	600  3150 600  3000
+Wire Wire Line
+	600  3000 800  3000
+Connection ~ 800  3000
+Wire Wire Line
+	800  3000 1000 3000
+Connection ~ 1000 3000
+Wire Wire Line
+	1000 3000 1200 3000
+Connection ~ 1200 3000
+Wire Wire Line
+	1200 3000 1400 3000
+Connection ~ 1400 3000
+Wire Wire Line
+	1400 3000 1600 3000
+Connection ~ 1600 3000
+Wire Wire Line
+	1600 3000 1800 3000
+Wire Wire Line
+	600  2650 600  2800
+Wire Wire Line
+	600  2800 800  2800
+Connection ~ 800  2800
+Wire Wire Line
+	800  2800 1000 2800
+Connection ~ 1000 2800
+Wire Wire Line
+	1000 2800 1200 2800
+Connection ~ 1200 2800
+Wire Wire Line
+	1200 2800 1400 2800
+Connection ~ 1400 2800
+Wire Wire Line
+	1400 2800 1600 2800
+Connection ~ 1600 2800
+Wire Wire Line
+	1600 2800 1800 2800
+Text GLabel 5550 4050 0    50   Input ~ 0
+FAN1TAC
+Text GLabel 7400 4050 0    50   Input ~ 0
+FAN2TAC
+Text GLabel 9250 4050 0    50   Input ~ 0
+FAN3TAC
+Text GLabel 5550 5200 0    50   Input ~ 0
+FAN4TAC
+Text GLabel 9250 5250 0    50   Input ~ 0
+FAN6TAC
+Text GLabel 3600 2450 2    50   Input ~ 0
+SCL
+Text GLabel 3600 2550 2    50   Input ~ 0
+SDA
+$Comp
+L Fan-Controller-rescue:10031569-001LF-SATA-RCPTL J1
+U 1 1 5FFB97F3
+P 3850 5250
+F 0 "J1" H 4378 4253 60  0000 L CNN
+F 1 "10031569-001LF" H 4378 4147 60  0000 L CNN
+F 2 "SATA-RCPTL:10031569-001LF" H 4250 4190 60  0001 C CNN
+F 3 "" H 3850 5250 60  0000 C CNN
+	1    3850 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 5950 3850 6050
+Connection ~ 3850 6050
+Wire Wire Line
+	3850 6050 3850 6150
+Wire Wire Line
+	3850 6550 3850 6650
+Connection ~ 3850 6650
+Wire Wire Line
+	3850 6650 3850 6750
+Wire Wire Line
+	3850 7150 3850 7250
+Connection ~ 3850 7250
+Wire Wire Line
+	3850 7250 3850 7350
+$Comp
+L power:+3.3V #PWR0123
+U 1 1 5FFCC305
+P 3650 5950
+F 0 "#PWR0123" H 3650 5800 50  0001 C CNN
+F 1 "+3.3V" H 3665 6123 50  0000 C CNN
+F 2 "" H 3650 5950 50  0001 C CNN
+F 3 "" H 3650 5950 50  0001 C CNN
+	1    3650 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0124
+U 1 1 5FFCDD08
+P 3650 6550
+F 0 "#PWR0124" H 3650 6400 50  0001 C CNN
+F 1 "+5V" H 3665 6723 50  0000 C CNN
+F 2 "" H 3650 6550 50  0001 C CNN
+F 3 "" H 3650 6550 50  0001 C CNN
+	1    3650 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0125
+U 1 1 5FFCEBCE
+P 3650 7150
+F 0 "#PWR0125" H 3650 7000 50  0001 C CNN
+F 1 "+12V" H 3665 7323 50  0000 C CNN
+F 2 "" H 3650 7150 50  0001 C CNN
+F 3 "" H 3650 7150 50  0001 C CNN
+	1    3650 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 7150 3850 7150
+Connection ~ 3850 7150
+Wire Wire Line
+	3650 6550 3850 6550
+Connection ~ 3850 6550
+Wire Wire Line
+	3650 5950 3850 5950
+Connection ~ 3850 5950
+Wire Wire Line
+	3850 6250 3850 6350
+Connection ~ 3850 6350
+Wire Wire Line
+	3850 6350 3850 6450
+Wire Wire Line
+	3850 6850 3850 6950
+Connection ~ 3850 6950
+Wire Wire Line
+	3850 6950 3850 7050
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0126
+U 1 1 5FFD4F91
+P 3650 6850
+F 0 "#PWR0126" H 3650 6900 20  0001 C CNN
+F 1 "GND" H 3650 6909 30  0000 C CNN
+F 2 "" H 3650 6850 60  0000 C CNN
+F 3 "" H 3650 6850 60  0000 C CNN
+	1    3650 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 6850 3650 6850
+Connection ~ 3850 6850
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0127
+U 1 1 5FFD7371
+P 3650 6250
+F 0 "#PWR0127" H 3650 6300 20  0001 C CNN
+F 1 "GND" H 3650 6309 30  0000 C CNN
+F 2 "" H 3650 6250 60  0000 C CNN
+F 3 "" H 3650 6250 60  0000 C CNN
+	1    3650 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 6250 3850 6250
+Connection ~ 3850 6250
+NoConn ~ 3850 5850
+NoConn ~ 3850 5750
+NoConn ~ 3850 5650
+NoConn ~ 3850 5550
+NoConn ~ 3850 5450
+NoConn ~ 3850 5350
+NoConn ~ 3850 5250
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0129
+U 1 1 5FFE7F28
+P 6450 1300
+F 0 "#PWR0129" H 6450 1350 20  0001 C CNN
+F 1 "GND" H 6450 1359 30  0000 C CNN
+F 2 "" H 6450 1300 60  0000 C CNN
+F 3 "" H 6450 1300 60  0000 C CNN
+	1    6450 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0131
+U 1 1 5FFE90D1
+P 6300 1400
+F 0 "#PWR0131" H 6300 1250 50  0001 C CNN
+F 1 "+5V" H 6315 1573 50  0000 C CNN
+F 2 "" H 6300 1400 50  0001 C CNN
+F 3 "" H 6300 1400 50  0001 C CNN
+	1    6300 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 1400 6300 1400
+Text GLabel 6450 1500 0    50   Input ~ 0
+SDA
+NoConn ~ 3600 1350
+NoConn ~ 3600 1250
+NoConn ~ 3600 2150
+NoConn ~ 3600 2250
+NoConn ~ 3600 3450
+Text GLabel 6450 1600 0    50   Input ~ 0
+SCL
+$Comp
+L keyboard_parts:USB_mini_micro_B J4
+U 1 1 5FFC7FBB
+P 1850 5650
+F 0 "J4" H 1431 5555 60  0000 R CNN
+F 1 "USB_mini_micro_B" H 1700 5900 60  0001 C CNN
+F 2 "Connector_USB:USB_Micro-B_GCT_USB3076-30-A" H 1800 5650 60  0001 C CNN
+F 3 "" H 1800 5650 60  0000 C CNN
+	1    1850 5650
+	-1   0    0    1   
+$EndComp
+NoConn ~ 1700 5300
+NoConn ~ 1700 5500
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0132
+U 1 1 5FFCB9D8
+P 1700 5400
+F 0 "#PWR0132" H 1700 5450 20  0001 C CNN
+F 1 "GND" H 1600 5400 30  0000 C CNN
+F 2 "" H 1700 5400 60  0000 C CNN
+F 3 "" H 1700 5400 60  0000 C CNN
+	1    1700 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0133
+U 1 1 5FFCBFFC
+P 1550 6000
+F 0 "#PWR0133" H 1550 5850 50  0001 C CNN
+F 1 "+5V" H 1565 6173 50  0000 C CNN
+F 2 "" H 1550 6000 50  0001 C CNN
+F 3 "" H 1550 6000 50  0001 C CNN
+	1    1550 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 6000 1700 6000
+Wire Wire Line
+	1700 6000 1700 5800
+Text GLabel 1700 5700 0    50   Input ~ 0
+D-
+Text GLabel 1700 5600 0    50   Input ~ 0
+D+
+$Comp
+L power:+12V #PWR0116
+U 1 1 6007030A
+P 5350 4700
+F 0 "#PWR0116" H 5350 4550 50  0001 C CNN
+F 1 "+12V" H 5365 4873 50  0000 C CNN
+F 2 "" H 5350 4700 50  0001 C CNN
+F 3 "" H 5350 4700 50  0001 C CNN
+	1    5350 4700
+	1    0    0    -1  
+$EndComp
+Text GLabel 7450 5250 0    50   Input ~ 0
+FAN5TAC
+$Comp
+L Device:R_Small R5
+U 1 1 5FFF966F
+P 5550 3950
+F 0 "R5" H 5609 3996 50  0000 L CNN
+F 1 "1k" H 5609 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5550 3950 50  0001 C CNN
+F 3 "~" H 5550 3950 50  0001 C CNN
+	1    5550 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5FFF9B14
+P 5750 3950
+F 0 "R6" H 5809 3996 50  0000 L CNN
+F 1 "1k" H 5809 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5750 3950 50  0001 C CNN
+F 3 "~" H 5750 3950 50  0001 C CNN
+	1    5750 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5FFFA3F9
+P 7400 3950
+F 0 "R7" H 7459 3996 50  0000 L CNN
+F 1 "1k" H 7459 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7400 3950 50  0001 C CNN
+F 3 "~" H 7400 3950 50  0001 C CNN
+	1    7400 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 5FFFA6B5
+P 7600 3950
+F 0 "R8" H 7659 3996 50  0000 L CNN
+F 1 "1k" H 7659 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7600 3950 50  0001 C CNN
+F 3 "~" H 7600 3950 50  0001 C CNN
+	1    7600 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 5FFFAF66
+P 9250 3950
+F 0 "R9" H 9309 3996 50  0000 L CNN
+F 1 "1k" H 9309 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 9250 3950 50  0001 C CNN
+F 3 "~" H 9250 3950 50  0001 C CNN
+	1    9250 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 5FFFBFC7
+P 9450 3950
+F 0 "R10" H 9509 3996 50  0000 L CNN
+F 1 "1k" H 9509 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 9450 3950 50  0001 C CNN
+F 3 "~" H 9450 3950 50  0001 C CNN
+	1    9450 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R11
+U 1 1 5FFFBFCD
+P 5550 5100
+F 0 "R11" H 5609 5146 50  0000 L CNN
+F 1 "1k" H 5609 5055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5550 5100 50  0001 C CNN
+F 3 "~" H 5550 5100 50  0001 C CNN
+	1    5550 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 5FFFD18F
+P 5750 5100
+F 0 "R12" H 5809 5146 50  0000 L CNN
+F 1 "1k" H 5809 5055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5750 5100 50  0001 C CNN
+F 3 "~" H 5750 5100 50  0001 C CNN
+	1    5750 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R13
+U 1 1 5FFFD195
+P 7450 5150
+F 0 "R13" H 7509 5196 50  0000 L CNN
+F 1 "1k" H 7509 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7450 5150 50  0001 C CNN
+F 3 "~" H 7450 5150 50  0001 C CNN
+	1    7450 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R14
+U 1 1 5FFFE861
+P 7650 5150
+F 0 "R14" H 7709 5196 50  0000 L CNN
+F 1 "1k" H 7709 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7650 5150 50  0001 C CNN
+F 3 "~" H 7650 5150 50  0001 C CNN
+	1    7650 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R15
+U 1 1 5FFFE867
+P 9250 5150
+F 0 "R15" H 9309 5196 50  0000 L CNN
+F 1 "1k" H 9309 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 9250 5150 50  0001 C CNN
+F 3 "~" H 9250 5150 50  0001 C CNN
+	1    9250 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R16
+U 1 1 60013106
+P 9450 5150
+F 0 "R16" H 9509 5196 50  0000 L CNN
+F 1 "1k" H 9509 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 9450 5150 50  0001 C CNN
+F 3 "~" H 9450 5150 50  0001 C CNN
+	1    9450 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Temperature:TWI_TEMP_SENSOR_HEADER J3
+U 1 1 6002298F
+P 6650 1400
+F 0 "J3" H 6828 1401 50  0000 L CNN
+F 1 "TWI_TEMP_SENSOR_HEADER" H 6828 1310 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6650 1650 50  0001 C CNN
+F 3 "" H 6650 1650 50  0001 C CNN
+	1    6650 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Fan-Controller-rescue:GND-keyboard_parts #PWR0128
+U 1 1 60029353
+P 6450 1900
+F 0 "#PWR0128" H 6450 1950 20  0001 C CNN
+F 1 "GND" H 6450 1959 30  0000 C CNN
+F 2 "" H 6450 1900 60  0000 C CNN
+F 3 "" H 6450 1900 60  0000 C CNN
+	1    6450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0130
+U 1 1 60029359
+P 6300 2000
+F 0 "#PWR0130" H 6300 1850 50  0001 C CNN
+F 1 "+5V" H 6315 2173 50  0000 C CNN
+F 2 "" H 6300 2000 50  0001 C CNN
+F 3 "" H 6300 2000 50  0001 C CNN
+	1    6300 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2000 6300 2000
+Text GLabel 6450 2100 0    50   Input ~ 0
+SDA
+Text GLabel 6450 2200 0    50   Input ~ 0
+SCL
+$Comp
+L Sensor_Temperature:TWI_TEMP_SENSOR_HEADER J2
+U 1 1 60029362
+P 6650 2000
+F 0 "J2" H 6828 2001 50  0000 L CNN
+F 1 "TWI_TEMP_SENSOR_HEADER" H 6828 1910 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6650 2250 50  0001 C CNN
+F 3 "" H 6650 2250 50  0001 C CNN
+	1    6650 2000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

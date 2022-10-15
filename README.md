@@ -28,6 +28,8 @@ The image of the GUI shown below was taken of the GUI running on my laptop witho
 
 ![GUI Image](GUI.png)
 
+On the backend, the program uses a cross-platform serial library from Github user wjWood which communicates with the fan controller over USB. I've found this connection to be incredibly consistent compared to whatever methods of communication are used by commericial fan controllers.
+
 ## Finally!
 I wish I could provide a more in depth overview of my decision making process, and the process of producing the device, but it's been a few years, and I've honestly forgotten so much.
 

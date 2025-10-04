@@ -1,3 +1,3 @@
 # FanController8
 
-![Fan Controller image](FanController.jpg)
+![Fan Controller image](FanControllerPCB.png)
